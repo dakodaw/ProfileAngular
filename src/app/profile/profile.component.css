@@ -1,0 +1,25 @@
+.ProfilePicture{
+    width: 100%;
+    margin-bottom: 0px;
+}
+.OverLayHeader{
+    z-index: 2;
+}
+.HeadImageContainer{
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.PictureHeader {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+.PictureText {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+

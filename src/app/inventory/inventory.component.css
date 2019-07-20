@@ -1,0 +1,9 @@
+.background{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+.ExamplePictures{
+    width: 100%;
+    padding-top: 20 px;
+    background-color: rgb(255, 255, 255);
+}
