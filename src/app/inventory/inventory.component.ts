@@ -15,7 +15,8 @@ export class InventoryComponent implements OnInit {
   + " a piece of equipment after reassigning it to another owner. There are dropdowns that you can use to sort the data in the"
   + " main table by department, location, asset model, brand, type, location, and any text in the table. You can also dispose"
   + " assets, add new assets, update asset information, and assignments.";
-
+  public linkToWebsite : string = "https://dakoda-willden.ddns.net/Inventory/WGUCapstone/";
+  public linkToCode : string = "https://github.com/dakodaw/Inventory";
   constructor() { }
 
   ngOnInit() {

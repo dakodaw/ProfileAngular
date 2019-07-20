@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core'; 
 
 @Component({
   selector: 'app-profile-summary',
@@ -13,6 +13,8 @@ export class ProfileSummaryComponent implements OnInit {
   @Input() title: string;
   @Input() firstSectionText: string;
   @Input() secondSectionText: string;
+  @Input() linkToWebsite : string;
+  @Input() linkToCode : string;
   
 
   constructor() {
@@ -21,5 +23,6 @@ export class ProfileSummaryComponent implements OnInit {
 
   ngOnInit() {
   }
+  
 
 }

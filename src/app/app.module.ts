@@ -10,6 +10,8 @@ import { InventoryComponent } from './inventory/inventory.component';
 import { ProfileSummaryComponent } from './profile-summary/profile-summary.component';
 import { InstructionsComponent } from './instructions/instructions.component';
 import { FooterComponent } from './footer/footer.component';
+import { CommonModule } from '@angular/common';
+import { BudgetInstructionsComponent } from './budget-instructions/budget-instructions.component';  
 
 @NgModule({
   declarations: [
@@ -20,10 +22,12 @@ import { FooterComponent } from './footer/footer.component';
     InventoryComponent,
     ProfileSummaryComponent,
     InstructionsComponent,
-    FooterComponent
+    FooterComponent,
+    BudgetInstructionsComponent
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule
   ],
   providers: [],
