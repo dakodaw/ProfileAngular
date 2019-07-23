@@ -11,7 +11,9 @@ import { ProfileSummaryComponent } from './profile-summary/profile-summary.compo
 import { InstructionsComponent } from './instructions/instructions.component';
 import { FooterComponent } from './footer/footer.component';
 import { CommonModule } from '@angular/common';
-import { BudgetInstructionsComponent } from './budget-instructions/budget-instructions.component';  
+import { BudgetInstructionsComponent } from './budget-instructions/budget-instructions.component';
+import { WguMobileComponent } from './wgu-mobile/wgu-mobile.component';
+import { AppointmentSchedulerComponent } from './appointment-scheduler/appointment-scheduler.component';  
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { BudgetInstructionsComponent } from './budget-instructions/budget-instru
     ProfileSummaryComponent,
     InstructionsComponent,
     FooterComponent,
-    BudgetInstructionsComponent
+    BudgetInstructionsComponent,
+    WguMobileComponent,
+    AppointmentSchedulerComponent
   ],
   imports: [
     BrowserModule,
