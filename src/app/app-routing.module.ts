@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { BudgetTestInstructionsComponent } from './budget-test-instructions/budget-test-instructions.component';
-import { ProfileComponent } from './profile/profile.component';
-import { InventoryComponent } from './inventory/inventory.component';
-import { WguMobileComponent } from './wgu-mobile/wgu-mobile.component';
-import { AppointmentSchedulerComponent } from './appointment-scheduler/appointment-scheduler.component'
+import { BudgetTestInstructionsComponent } from './pages/budget-test-instructions/budget-test-instructions.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { InventoryComponent } from './pages/inventory/inventory.component';
+import { WguMobileComponent } from './pages/wgu-mobile/wgu-mobile.component';
+import { AppointmentSchedulerComponent } from './pages/appointment-scheduler/appointment-scheduler.component'
 
 
 const routes: Routes = [

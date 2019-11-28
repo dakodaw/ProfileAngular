@@ -1,3 +1,15 @@
+html, body {
+    margin: 0;
+    min-height: calc(100vh - 60px);
+}
+/* .content {
+    padding: 20px;
+    min-height: 100vh;
+    margin: 0 auto -50px;
+} */
+.footer{
+    height: 50px;
+}
 p{
     text-indent: 50px;
     width: 60%;
@@ -12,4 +24,8 @@ p{
 }
 .AlignLeft{
     text-align: left;
+}
+.Site-Content{
+    min-height: calc(100vh - 60px);
+    margin: 0 auto -60px;
 }
