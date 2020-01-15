@@ -7,7 +7,8 @@
     "build": "ng build --prod --source-map",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "transform": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command src/building/build.ps1"
   },
   "private": true,
   "dependencies": {
