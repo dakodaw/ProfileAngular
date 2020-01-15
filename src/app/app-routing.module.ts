@@ -11,13 +11,13 @@ const routes: Routes = [
   { path: '', redirectTo: '/Profile', pathMatch: 'full'},
   { path: 'BudgetTest', component: BudgetTestInstructionsComponent},
   { path: 'Inventory', component: InventoryComponent},
-  { path: 'Profile', component: ProfileComponent},
+  { path: 'Profile', component: ProfileComponent, pathMatch: 'full'},
   { path: 'Mobile', component: WguMobileComponent},
   { path: 'Appointment-Scheduler', component: AppointmentSchedulerComponent}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {useHash: true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
