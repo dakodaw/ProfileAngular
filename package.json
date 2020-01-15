@@ -4,11 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --source-map",
+    "build": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command src/building/build.ps1",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "transform": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command src/building/build.ps1"
+    "transform": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command src/building/transform.ps1"
   },
   "private": true,
   "dependencies": {
