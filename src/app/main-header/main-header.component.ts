@@ -7,9 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainHeaderComponent implements OnInit {
 
+  public showNavOptions: boolean = false;
+  public showBudgetSubOptions: boolean = false;
+
   constructor() { }
 
   ngOnInit() {
+  }
+  
+  openNav(){
+    this.showNavOptions = true;
+  }
+
+  closeNav(){
+    this.showNavOptions = false;
+    this.showBudgetSubOptions = false;
+  }
+
+  showHideBudgetOptions(){
+    this.showBudgetSubOptions = !this.showBudgetSubOptions;
   }
 
 }
