@@ -1,16 +1,22 @@
 <div class="navbar">
-    <a routerLink="/Profile">Dakoda's Profile</a>
-    <div class="dropdown">
-        <button routerLink="/BudgetTest" class="dropbtn">
-            Budget
-        </button>
-        <div class="dropdown-content">
-            <a routerLink="/BudgetTest">Budget Test</a>
-            <a routerLink="/BudgetTest">Budget API (Code not up yet)</a>
-            <a routerLink="/BudgetTest">Budget Angular(Code not up yet)</a>
-        </div>
-    </div>
-    <a routerLink="/Inventory">Inventory</a>
-    <a routerLink="/Mobile">WGU Mobile</a>
-    <a routerLink="/Appointment-Scheduler">Appointment Scheduler</a>
+    <a class="clickable" (click)="openNav()">&#9776; Projects</a>
 </div >
+<div id="myNav" class="overlay" *ngIf="showNavOptions">
+    <a class="closebtn" style="cursor: pointer;" (click)="closeNav()">&times;</a>
+    <div class="overlay-content">
+        <a routerLink="/Profile" (click)="closeNav()">Dakoda's Profile</a>
+        <div>
+            <a class="clickable" (click)="showHideBudgetOptions()">
+                <b>Budget</b>
+            </a>
+            <div class="sub-content" *ngIf="showBudgetSubOptions">
+                <a routerLink="/BudgetTest" (click)="closeNav()">Budget Test</a>
+                <a routerLink="/BudgetTest" (click)="closeNav()">Budget API (Code not up yet)</a>
+                <a routerLink="/BudgetTest" (click)="closeNav()">Budget Angular(Code not up yet)</a>
+            </div>
+        </div>
+        <a routerLink="/Inventory" (click)="closeNav()">Inventory</a>
+        <a routerLink="/Mobile" (click)="closeNav()">WGU Mobile</a>
+        <a routerLink="/Appointment-Scheduler" (click)="closeNav()">Appointment Scheduler</a>
+    </div>
+</div>
