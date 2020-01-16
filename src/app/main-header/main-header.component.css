@@ -36,12 +36,12 @@ footer {
     width: 100%;
     position: fixed;
     z-index: 1;
+    overflow: auto;
     top: 0;
     left: 0;
-    background-color: rgb(0,0,0);
     background-color: rgba(0,0,0, 0.9);
     transition: 0.5s;
-  }
+}
   
   .overlay-content {
     position: relative;
@@ -72,11 +72,11 @@ footer {
     font-size: 60px;
   }
   
-  .sub-content{
+.sub-content{
     background-color: black;
     opacity: 80%;
-  }
+}
 
-  .clickable{
+.clickable{
     cursor: pointer;
-  }
+}
