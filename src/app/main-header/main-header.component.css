@@ -72,9 +72,11 @@ footer {
     font-size: 60px;
   }
   
-.sub-content{
-    background-color: rgb(59, 59, 59);
+.sub-content, .sub-content a {
+    background-color: rgb(127, 127, 127);
     opacity: 80%;
+    font-size: 25px;
+    color: rgb(0, 0, 0);
 }
 
 .clickable{
