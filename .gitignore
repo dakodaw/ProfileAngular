@@ -48,3 +48,5 @@ Thumbs.db
 .firebase/
 
 .vs/
+
+src/environments/firebase/firebase-local-ignore.ts
