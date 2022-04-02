@@ -28,3 +28,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Production Build on local machine in an applet of a website
 ng build --prod  --source-map
+
+
+
+## Deploying to Firebase
+run `ng build` then `firebase deploy`.
