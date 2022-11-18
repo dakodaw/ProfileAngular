@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { GitHubProfile } from './models/github-profile';
 import { GitHubRepository } from './models/github-repository';
-import { map } from 'rxjs/operators';
+import { map, mergeMap } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { RepositoryInfo } from './models/repository-info';
 
@@ -22,10 +22,12 @@ export class GithubIntegrationService {
   public profile$ = this.http.get<GitHubProfile>(`https://api.github.com/users/${this.name}`, this.httpOptions);
   public repos$ = this.http.get<GitHubRepository[]>(`https://api.github.com/users/${this.name}/repos`, this.httpOptions);
   public repoNames$ = this.repos$.pipe(map(x => x.map(repo => repo.name)));
+
+  // Probably do some shared replay above to not make a bunch of repos calls.
   public parsedRepoInfos$: Observable<RepositoryInfo[]> = this.repos$.pipe (
     map(gitHubRepos => {
       return gitHubRepos.map(githubRepo => this.mapGithubRepositoryToInternal(githubRepo))
-    })
+    }),
   )
 
   constructor(
@@ -35,13 +37,17 @@ export class GithubIntegrationService {
     this.repoNames$.subscribe(console.log)
   }
 
+  public getRepoTechnologies(repo: RepositoryInfo) {
+    return this.http.get(repo.TechnologiesUrl, this.httpOptions);
+  }
+
   private mapGithubRepositoryToInternal(gitHubRepo: GitHubRepository): RepositoryInfo {
     const repo: RepositoryInfo = {
       Description: gitHubRepo.description,
       Name: gitHubRepo.name,
       LinkToCode: gitHubRepo.html_url,
-
-      Language: gitHubRepo.language
+      Language: gitHubRepo.language,
+      TechnologiesUrl: gitHubRepo.languages_url
     }
 
     if (gitHubRepo.homepage) {

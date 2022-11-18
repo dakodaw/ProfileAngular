@@ -2,7 +2,7 @@
   <div class="bodyContent">
     <app-profile-summary
       title="{{ repo.Name }}"
-      firstSectionText="Technologies Used: {{ repo.Language }}"
+      firstSectionText="Technologies Used: {{ technologies$ | async }}"
       secondSectionText="{{ repo.Description }}"
       linkToCode="{{ repo.LinkToCode }}"
       linkToWebsite="{{ repo.LinkToSite }}"></app-profile-summary>

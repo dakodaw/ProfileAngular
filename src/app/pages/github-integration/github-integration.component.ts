@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { stringLength } from '@firebase/util';
 import { combineLatest, Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, switchMap } from 'rxjs/operators';
 import { GithubIntegrationService } from 'src/app/services/github-integration/github-integration.service';
 import { RepositoryInfo } from 'src/app/services/github-integration/models/repository-info';
 
@@ -21,6 +22,15 @@ export class GithubIntegrationComponent implements OnInit {
       })
     );
 
+  public technologies$: Observable<string> = this.routedRepo$.pipe(
+    switchMap(repo => this.gitHubIntegration.getRepoTechnologies(repo)),
+    map((technologyMap: any) => {
+      var list = Object.keys(technologyMap) ?? [];
+      var string = list.join(', ');
+      return string
+    })
+  );
+
   constructor(
     private readonly gitHubIntegration: GithubIntegrationService,
     private readonly route: ActivatedRoute
@@ -29,6 +39,7 @@ export class GithubIntegrationComponent implements OnInit {
 
   ngOnInit(): void {
     this.routedRepo$.subscribe(console.log)
+    this.technologies$.subscribe(x => console.log("Technologies", x))
   }
 
 }

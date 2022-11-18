@@ -4,4 +4,5 @@ export interface RepositoryInfo {
   LinkToCode: string;
   LinkToSite?: string;
   Name: string;
+  TechnologiesUrl: string;
 }
