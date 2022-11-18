@@ -15,6 +15,7 @@ import { BudgetInstructionsComponent } from './pages/budget-test-instructions/bu
 import { WguMobileComponent } from './pages/wgu-mobile/wgu-mobile.component';
 import { AppointmentSchedulerComponent } from './pages/appointment-scheduler/appointment-scheduler.component';
 import { HttpClientModule } from '@angular/common/http';
+import { GithubIntegrationComponent } from './pages/github-integration/github-integration.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
     BudgetInstructionsComponent,
     WguMobileComponent,
     AppointmentSchedulerComponent,
+    GithubIntegrationComponent,
   ],
   imports: [
     BrowserModule,

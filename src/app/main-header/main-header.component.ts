@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { GithubIntegrationService } from '../services/github-integration/github-integration.service';
 
 @Component({
   selector: 'app-main-header',
@@ -9,23 +11,30 @@ export class MainHeaderComponent implements OnInit {
 
   public showNavOptions: boolean = false;
   public showBudgetSubOptions: boolean = false;
+  public showMoreSubOptions: boolean = false;
+  public moreOptions$: Observable<string[]> = this.gitHubIntegration.repoNames$;
 
-  constructor() { }
+  constructor(private readonly gitHubIntegration: GithubIntegrationService) { }
 
-  ngOnInit() {
+  public ngOnInit() {
   }
 
-  openNav(){
+  public openNav(){
     this.showNavOptions = true;
   }
 
-  closeNav(){
+  public closeNav(){
     this.showNavOptions = false;
     this.showBudgetSubOptions = false;
+    this.showMoreSubOptions = false;
   }
 
-  showHideBudgetOptions(){
+  public showHideBudgetOptions() {
     this.showBudgetSubOptions = !this.showBudgetSubOptions;
+  }
+
+  public showHideMoreOptions() {
+    this.showMoreSubOptions = !this.showMoreSubOptions;
   }
 
 }

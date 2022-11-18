@@ -19,5 +19,13 @@
         <a routerLink="/Inventory" (click)="closeNav()">Inventory</a>
         <a routerLink="/Mobile" (click)="closeNav()">WGU Mobile App</a>
         <a routerLink="/Appointment-Scheduler" (click)="closeNav()">Appointment Scheduler</a>
+        <div>
+          <a class="clickable" (click)="showHideMoreOptions()">
+              <b>More</b>
+          </a>
+          <div class="sub-content" *ngIf="showMoreSubOptions">
+            <a *ngFor="let route of moreOptions$ | async" routerLink="/GitHub-Integration/{{route}}" (click)="closeNav()">{{ route }}</a>
+          </div>
+      </div>
     </div>
 </div>

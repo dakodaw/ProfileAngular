@@ -1,0 +1,11 @@
+<ng-container *ngIf="routedRepo$ | async as repo">
+  <div class="bodyContent">
+    <app-profile-summary
+      title="{{ repo.Name }}"
+      firstSectionText="Technologies Used: {{ repo.Language }}"
+      secondSectionText="{{ repo.Description }}"
+      linkToCode="{{ repo.LinkToCode }}"
+      linkToWebsite="{{ repo.LinkToSite }}"></app-profile-summary>
+    <div class="footerBuffer"></div>
+  </div>
+</ng-container>

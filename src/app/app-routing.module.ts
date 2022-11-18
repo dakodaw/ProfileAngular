@@ -5,6 +5,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { InventoryComponent } from './pages/inventory/inventory.component';
 import { WguMobileComponent } from './pages/wgu-mobile/wgu-mobile.component';
 import { AppointmentSchedulerComponent } from './pages/appointment-scheduler/appointment-scheduler.component'
+import { GithubIntegrationComponent } from './pages/github-integration/github-integration.component';
 
 
 const routes: Routes = [
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: 'Inventory', component: InventoryComponent},
   { path: 'Profile', component: ProfileComponent, pathMatch: 'full'},
   { path: 'Mobile', component: WguMobileComponent},
-  { path: 'Appointment-Scheduler', component: AppointmentSchedulerComponent}
+  { path: 'Appointment-Scheduler', component: AppointmentSchedulerComponent},
+  { path: 'GitHub-Integration/:repoName', component: GithubIntegrationComponent}
 ];
 
 @NgModule({
