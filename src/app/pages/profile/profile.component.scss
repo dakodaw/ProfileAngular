@@ -1,58 +1,62 @@
-.ProfilePicture{
-    width: 100%;
-    margin-bottom: 0px;
+.ProfilePicture {
+  width: 100%;
+  margin-bottom: 0px;
+  max-height: 80vh;
+  object-fit: cover;
+  background-position: center;
 }
-.OverLayHeader{
-    z-index: 2;
+.OverLayHeader {
+  z-index: 2;
 }
-.HeadImageContainer{
-    position: relative;
-    text-align: center;
-    color: white;
+.HeadImageContainer {
+  position: relative;
+  text-align: center;
+  color: white;
+  max-height: 60vh;
 }
 
 .PictureHeader {
-    position: absolute;
-    top: 10%;
-    left: 20%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  transform: translate(-50%, -50%);
 }
 .PictureText {
-    position: absolute;
-    top: 20%;
-    left: 20%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  transform: translate(-50%, -50%);
 }
 
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2) { 
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2) {
     .PictureHeader {
-        position: absolute;
-        top: 10%;
-        left: 35%;
-        transform: translate(-50%, -50%);
+      position: absolute;
+      top: 10%;
+      left: 35%;
+      transform: translate(-50%, -50%);
     }
     .PictureText {
-        position: absolute;
-        top: 25%;
-        left: 35%;
-        transform: translate(-50%, -50%);
+      position: absolute;
+      top: 25%;
+      left: 35%;
+      transform: translate(-50%, -50%);
     }
-    .ProfilePicture{
-        width: 100%;
-        margin-bottom: 0px;
-        opacity: 0.7;
-        background-color: black;
+    .ProfilePicture {
+      width: 100%;
+      margin-bottom: 0px;
+      opacity: 0.7;
+      background-color: black;
     }
-    .HeadImageContainer{
-        position: relative;
-        text-align: center;
-        color: white;
-        background-color: black;
+    .HeadImageContainer {
+      position: relative;
+      text-align: center;
+      color: white;
+      background-color: black;
     }
 }

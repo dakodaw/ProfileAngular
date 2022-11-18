@@ -13,7 +13,8 @@ import { FooterComponent } from './footer/footer.component';
 import { CommonModule } from '@angular/common';
 import { BudgetInstructionsComponent } from './pages/budget-test-instructions/budget-instructions/budget-instructions.component';
 import { WguMobileComponent } from './pages/wgu-mobile/wgu-mobile.component';
-import { AppointmentSchedulerComponent } from './pages/appointment-scheduler/appointment-scheduler.component';  
+import { AppointmentSchedulerComponent } from './pages/appointment-scheduler/appointment-scheduler.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,12 +28,13 @@ import { AppointmentSchedulerComponent } from './pages/appointment-scheduler/app
     FooterComponent,
     BudgetInstructionsComponent,
     WguMobileComponent,
-    AppointmentSchedulerComponent
+    AppointmentSchedulerComponent,
   ],
   imports: [
     BrowserModule,
     CommonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
