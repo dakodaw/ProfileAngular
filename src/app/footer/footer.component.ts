@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  @Input() footerText: string = "Dakoda Willden   2019";
+  @Input() footerText: string = "Dakoda Willden   2023";
 
 
 
