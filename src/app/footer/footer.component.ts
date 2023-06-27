@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  @Input() footerText: string = "Dakoda Willden   2023";
+  @Input() footerText: string = `Dakoda Willden   ${new Date().getFullYear()}`;
 
 
 
