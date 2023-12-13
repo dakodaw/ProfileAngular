@@ -1,6 +1,7 @@
 {
   "hosting": {
     "public": "dist/dakoda-willden",
+    "site": "dakoda-willden-portfolio-old",
     "ignore": [
       "firebase.json",
       "**/.*",
